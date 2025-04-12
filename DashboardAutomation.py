@@ -26,7 +26,7 @@ def add_corporate_styling():
         background-color: #f9f9f9;
     }
     .st-bw {
-        background-color: #ffffff;
+        background-color: ##FAFAFA;
     }
     .stTabs [data-baseweb="tab-list"] {
         gap: 24px;
