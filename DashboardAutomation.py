@@ -423,7 +423,7 @@ def main():
                 # Create and display chart
                 city_chart = create_city_transactions_chart(df, city_column, transaction_column, theme_colors)
                 if city_chart:
-                    st.plotly_chart(city_chart, use_container_width=True)
+                    st.plotly_chart(city_chart, use_container_width=True, key="city_chart")
                     all_charts["City Transactions"] = city_chart
                 else:
                     st.warning("Could not create city transactions chart with selected columns.")
@@ -456,7 +456,7 @@ def main():
                 # Create and display chart
                 account_chart = create_account_type_pie_chart(df, account_column, value_column, theme_colors)
                 if account_chart:
-                    st.plotly_chart(account_chart, use_container_width=True)
+                    st.plotly_chart(account_chart, use_container_width=True, key="account_chart")
                     all_charts["Account Types"] = account_chart
                 else:
                     st.warning("Could not create account type chart with selected columns.")
@@ -490,7 +490,7 @@ def main():
                 # Create and display chart
                 bank_chart = create_bank_transactions_bar_chart(df, transaction_value_column, bank_column, theme_colors)
                 if bank_chart:
-                    st.plotly_chart(bank_chart, use_container_width=True)
+                    st.plotly_chart(bank_chart, use_container_width=True, key="transaction_chart")
                     all_charts["Bank Transactions"] = bank_chart
                 else:
                     st.warning("Could not create bank transactions chart with selected columns.")
@@ -524,7 +524,7 @@ def main():
                 # Create and display chart
                 type_chart = create_transaction_types_chart(df, type_column, count_column, theme_colors)
                 if type_chart:
-                    st.plotly_chart(type_chart, use_container_width=True)
+                    st.plotly_chart(type_chart, use_container_width=True, key="bank_chart")
                     all_charts["Transaction Types"] = type_chart
                 else:
                     st.warning("Could not create transaction types chart with selected columns.")
