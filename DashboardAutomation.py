@@ -292,19 +292,29 @@ def main():
     st.title("Corporate Dashboard Creator")
     st.write("Upload your data file to automatically generate professional dashboards")
     
-    # Sidebar for configuration
-    with st.sidebar:
-        st.header("Dashboard Configuration")
-        selected_theme = st.selectbox(
-            "Select Theme", 
-            list(THEMES.keys()),
-            index=0
-        )
-        theme_colors = THEMES[selected_theme]
+# Sidebar for configuration
+with st.sidebar:
+    st.header("Dashboard Configuration")
+    selected_theme = st.selectbox(
+        "Select Theme", 
+        list(THEMES.keys()),
+        index=0,
+        format_func=lambda x: x,  # Display the theme name as is
+        key="theme_selector"
+    )
+    theme_colors = THEMES[selected_theme]
+    
+    st.markdown("---")
+    st.subheader("About")
+    st.info(
+        "This application automatically analyzes your data "
+        "and creates professional corporate dashboards. "
+        "Upload a CSV or Excel file to get started."
+    )
         
-        st.markdown("---")
-        st.subheader("About")
-        st.info(
+    st.markdown("---")
+    st.subheader("About")
+    st.info(
             "This application automatically analyzes your data "
             "and creates professional corporate dashboards. "
             "Upload a CSV or Excel file to get started."
