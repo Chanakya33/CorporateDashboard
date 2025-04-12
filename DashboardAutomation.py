@@ -81,7 +81,33 @@ THEMES = {
         "accent": "#0c5460",
         "background": "#f9f9f9",
         "text": "#0c5460"
+    },
+
+    "Executive Navy": {
+    "primary": "#1a1a40",
+    "secondary": "#4c4c7a",
+    "accent": "#0d0d26",
+    "background": "#f4f6f8",
+    "text": "#1a1a40"
+    },
+
+    "Modern Amber": {
+    "primary": "#ff8c00",
+    "secondary": "#ffd699",
+    "accent": "#cc7000",
+    "background": "#fefefe",
+    "text": "#663c00"
+    },
+
+    "Elegant Purple": {
+    "primary": "#6f42c1",
+    "secondary": "#d6b3ff",
+    "accent": "#4b2a8a",
+    "background": "#f9f9f9",
+    "text": "#4b2a8a"
     }
+
+
 }
 
 # Data detection functions
