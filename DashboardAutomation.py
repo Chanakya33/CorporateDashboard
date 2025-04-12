@@ -343,7 +343,7 @@ def main():
         try:
             # Load data
             if uploaded_file.name.endswith('.csv'):
-                df = pd.read_csv(uploaded_file)
+                df = pd.read_csv("data.csv", encoding="utf-8")
             else:
                 df = pd.read_excel(uploaded_file)
                 
