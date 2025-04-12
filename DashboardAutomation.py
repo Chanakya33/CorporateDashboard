@@ -311,14 +311,6 @@ with st.sidebar:
         "and creates professional corporate dashboards. "
         "Upload a CSV or Excel file to get started."
     )
-        
-    st.markdown("---")
-    st.subheader("About")
-    st.info(
-            "This application automatically analyzes your data "
-            "and creates professional corporate dashboards. "
-            "Upload a CSV or Excel file to get started."
-        )
     
     # File uploader
     uploaded_file = st.file_uploader("Choose a CSV or Excel file", type=["csv", "xlsx"])
