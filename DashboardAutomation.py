@@ -397,7 +397,7 @@ def main():
             
             # Tab 1: City Transactions
             with tabs[0]:
-                st.header("City-wise Transactions")
+                st.header("Clustered Column Chart")
                 
                 # Column selection
                 col1, col2 = st.columns(2)
@@ -430,7 +430,7 @@ def main():
             
             # Tab 2: Account Types
             with tabs[1]:
-                st.header("Account Type-wise Transactions")
+                st.header("Pie Chart")
                 
                 # Column selection
                 col1, col2 = st.columns(2)
@@ -463,7 +463,7 @@ def main():
             
             # Tab 3: Bank Transactions
             with tabs[2]:
-                st.header("Bank-wise Transactions")
+                st.header("Bar Chart")
                 
                 # Column selection
                 col1, col2 = st.columns(2)
@@ -497,7 +497,7 @@ def main():
             
             # Tab 4: Transaction Types
             with tabs[3]:
-                st.header("Transaction Type Analysis")
+                st.header("Clustered Column Chart")
                 
                 # Column selection
                 col1, col2 = st.columns(2)
