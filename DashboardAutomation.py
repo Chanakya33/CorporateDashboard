@@ -14,7 +14,7 @@ import os
 # Set page configuration
 st.set_page_config(
     page_title="Corporate Dashboard",
-    page_icon=r"c:\Users\CHANAKYA\Dashboard Icons\visual-data.png",
+    page_icon="📊",
     layout="wide",
 )
 
@@ -292,25 +292,23 @@ def main():
     st.title("Corporate Dashboard Creator")
     st.write("Upload your data file to automatically generate professional dashboards")
     
-# Sidebar for configuration
-with st.sidebar:
-    st.header("Dashboard Configuration")
-    selected_theme = st.selectbox(
-        "Select Theme", 
-        list(THEMES.keys()),
-        index=0,
-        format_func=lambda x: x,  # Display the theme name as is
-        key="theme_selector"
-    )
-    theme_colors = THEMES[selected_theme]
-    
-    st.markdown("---")
-    st.subheader("About")
-    st.info(
-        "This application automatically analyzes your data "
-        "and creates professional corporate dashboards. "
-        "Upload a CSV or Excel file to get started."
-    )
+    # Sidebar for configuration
+    with st.sidebar:
+        st.header("Dashboard Configuration")
+        selected_theme = st.selectbox(
+            "Select Theme", 
+            list(THEMES.keys()),
+            index=0
+        )
+        theme_colors = THEMES[selected_theme]
+        
+        st.markdown("---")
+        st.subheader("About")
+        st.info(
+            "This application automatically analyzes your data "
+            "and creates professional corporate dashboards. "
+            "Upload a CSV or Excel file to get started."
+        )
     
     # File uploader
     uploaded_file = st.file_uploader("Choose a CSV or Excel file", type=["csv", "xlsx"])
