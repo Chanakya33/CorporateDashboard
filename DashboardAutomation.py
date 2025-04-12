@@ -292,7 +292,7 @@ def get_excel_download_link(df, filename="dashboard_data.xlsx"):
     """Generate a download link for the dataframe as Excel."""
     output = BytesIO()
     with pd.ExcelWriter(output, engine='openpyxl') as writer:
-        df.to_excel(writer, index=False, sheet_name='Data')
+        df.to_csv("output.csv", index=False, encoding="utf-8")
     excel_data = output.getvalue()
     b64 = base64.b64encode(excel_data).decode()
     return f'<a href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,{b64}" download="{filename}">Download Excel file</a>'
